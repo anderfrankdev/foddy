@@ -1,0 +1,257 @@
+body{
+	padding-top: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-family: sans-serif;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.logo{
+	position: absolute;
+	left: 20px;
+	top: 8px;
+	margin: 0;
+	font-family: sans-serif;
+	font-weight: bolder;
+	font-size: 36px;
+	letter-spacing: 4px;
+	text-shadow: 4px 0px 0px cyan;
+	color: darkcyan;
+}
+.menu{
+	padding: 0;
+	display: flex;
+	background: white;
+	position: fixed;
+	width: 100%;
+	box-sizing: content-box;
+	top: 0;
+	height: 60px;
+	box-shadow: 1px 5px 15px rgba(0,0,0,0.4);
+}
+.cart{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	right: 6px;
+	top: 6px;
+}
+.cart-list{
+	border-radius: 35px 0px 0px 35px;
+	position: absolute;
+	right: 45px;
+	width: 220px;
+	height: 500px;
+	top: 25px;
+	background: white;
+	box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: auto;
+}
+
+
+.selected{
+	padding: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	background: white;
+	box-shadow: 0px 5px 15px rgb(0,0,0,0.5);
+	margin-inline:10px;
+	box-sizing: content-box;
+}
+
+.main-title{
+	margin-top: 90px;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+h1+hr{
+	width: 70px;
+	height: 4px;
+	background: darkcyan;
+	border: none;
+}
+
+.category{
+	margin-block: 40px;
+	display: flex;
+	justify-content: center;
+}
+.meal-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0 auto;
+	align-items: center;
+}
+.plate{
+	margin-block:20px;
+	display: flex;
+	flex-direction: row;
+	width: 500px;
+	justify-content:space-between;
+	text-align: left;
+}
+
+.plate-img{
+	width: 220px;
+	height: 140px;
+	border:5px solid darkcyan;
+	border-radius: 12px 12px 12px 12px;
+
+}
+.plate-info{
+	margin-left: 20px;
+	width: 250px;
+	font-size: 14px;
+	color: rgb(60,60,60);
+}
+.plate-info>header{
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.plate-name,.plate-price {
+	margin:0;
+}
+
+.plate-name{
+	font-size: 13px;
+	color: black;
+	letter-spacing: 2px;
+	
+}
+.plate-price{
+	color: darkcyan;
+	font-size: 15px;
+}
+.pay{
+	margin-bottom: 15px;
+}
+
+.category-button{
+	border:2px solid ;
+	background:none;
+	border-radius: 10px 10px 10px 10px;
+	height: 35px;
+	color: darkcyan;
+	font-size: 17px;
+	text-shadow: 1px 1px 1px black;
+	margin-inline: 5px;
+}
+.order{
+	font-size: 28px;
+	width: 40%;
+	border:4px solid;
+	height: auto;
+}
+.close-selected{
+	position: absolute;
+	top: 8px;
+	right:  5px;
+	width: 35px;
+	background: darkred;
+	color: white;
+	border-color: darkred;
+}
+.plate_in_cart{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.name_and_delete{
+	margin-left:3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.img_plateInCart{
+	width: 120px;
+	height: 80px;
+}
+.delete{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	height: 20px;
+	width: 20px;
+	font-size: 15px;
+	padding: 0;
+	background: darkred;
+	color: white;
+	border-color: darkred;
+}
+
+
+@media (max-width: 1020px){
+	.meal-container{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.plate{
+		width: 85%;
+	}
+	.plate-img{
+		width: 300px;
+		height: 210px;
+	}
+	.plate-info{
+		width: 50%;
+		font-size: 16px;
+	}
+	.plate-name{
+	font-size: 16px;
+	color: black;
+	letter-spacing: 2px;
+	
+	}
+	.plate-price{
+		color: darkcyan;
+		font-size: 17px;
+	}
+}
+
+@media (max-width: 680px){
+	.plate{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.plate-img{
+		width: 510px;
+		height: 350px;
+	}
+	.plate-info{
+		width: 510px;
+		margin-top: 20px;
+		margin-left: 0px;
+	}
+}
+
+@media (max-width: 580px){
+	.plate-img{
+		width: 400px;
+		height: 280px;
+	}
+	.plate-info{
+		width: 400px;
+	}
+}
