@@ -87,19 +87,25 @@ const menu = document.getElementById('menu');
 const show_selected = (scroll,element)=>{
 	const box = document.createElement('DIV');
 	box.id = 'selected';
-	box.classList.add('selected')
-	box.style.marginTop = `${innerHeight*0.20}px`
-	const selected_plate = element.cloneNode(true);
+	box.classList.add('selected');
+	box.style.marginTop = `${innerHeight*0.1}px`;
+	const selected_plate = plates.filter(a => a.id == element.id)[0];
 	const add_to_car = document.createElement('BUTTON');
-	add_to_car.classList.add('category-button','order')
-	add_to_car.innerHTML=`Add to cart`
+	add_to_car.classList.add('category-button','order');
+	add_to_car.innerHTML=`Add to cart`;
 	const close_selected = document.createElement('BUTTON');
-	close_selected.classList.add('category-button','close-selected')
+	close_selected.classList.add('category-button','close-selected');
 	close_selected.id="close-selected";
-	close_selected.innerHTML=`X`
-	box.insertAdjacentElement('afterbegin',selected_plate)
-	box.insertAdjacentElement('afterbegin',close_selected)
-	box.insertAdjacentElement('beforeend',add_to_car)
+	close_selected.innerHTML=`X`;
+	box.innerHTML=`
+		<div class='selected-name'>
+			<p>${selected_plate.name}</p>
+		</div>
+		<img src='images/${selected_plate.photo}' class='img_plateSelected'">
+		<p class='price_plateSelected'>${selected_plate.price.toFixed(2)}$</p>
+				`;
+	box.insertAdjacentElement('afterbegin',close_selected);
+	box.insertAdjacentElement('beforeend',add_to_car);
 	document.body.appendChild(box);
 	const close_selected_plate = (element)=>{
 		if (element.id=='close-selected'){
@@ -125,7 +131,7 @@ const show_selected = (scroll,element)=>{
 		box.replaceChild(alert,box.lastElementChild);
 
 		// Get the object that the user selected
-		const selected_plate = plates.filter(a => a.id == box.firstElementChild.nextElementSibling.id)[0]
+		const selected_plate = plates.filter(a => a.id == element.id)[0]
 		cart.push(selected_plate)
 	})
 }
