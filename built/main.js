@@ -9,7 +9,12 @@ class plate{
 	}
 }
 
-const buttermilk_pancake = new plate('Buttermilk pancake', 13.5,'buttermilk_pancake', 'buttermilk_pancake.jpeg','breakfast',
+const buttermilk_pancake = new plate(
+	'Buttermilk pancake',
+	13.5,
+	'buttermilk_pancake', 
+	'buttermilk_pancake.jpeg',
+	'breakfast',
 	`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`) 
 
 const diner_double = new plate('Diner double', 10.8,'diner_double', 'diner_double.jpeg','breakfast',
