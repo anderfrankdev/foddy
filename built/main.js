@@ -40,7 +40,18 @@ const country_delight = new plate('Country delight', 13.5,'country_delight', 'co
 	`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`) 
 
 
-const plates = [buttermilk_pancake,diner_double,egg_attack,oreo_dream,bacon_overflow,amarican_classic,quarantine_buddy,steak_dinner,godzilla_milkshake,country_delight]
+const plates = [
+	buttermilk_pancake,
+	diner_double,
+	egg_attack,
+	oreo_dream,
+	bacon_overflow,
+	amarican_classic,
+	quarantine_buddy,
+	steak_dinner,
+	godzilla_milkshake,
+	country_delight
+]
 
 const category = document.getElementById('category')
 const meal_container = document.getElementById('meal-container')
